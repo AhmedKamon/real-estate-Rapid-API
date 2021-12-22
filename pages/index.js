@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import { Flex, Box, Text, Button } from '@chakra-ui/react';
+import { Flex, Box, Text, Button, ChakraProvider } from '@chakra-ui/react';
 
 import { baseUrl, fetchApi } from '../utils/fetchApi';
 import Property from '../components/Property';
@@ -39,6 +39,7 @@ const Banner = ({
 
 export default function Home({ propertiesForSale, propertiesForRent }) {
   return (
+    // <ChakraProvider>
     <Box>
       <Banner
         purpose="RENT A HOME"
